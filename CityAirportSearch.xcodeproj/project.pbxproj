@@ -20,6 +20,14 @@
 		2CA2BB4A2794728500F8D107 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB492794728500F8D107 /* BaseCoordinator.swift */; };
 		2CA2BB4D279472F000F8D107 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB4C279472F000F8D107 /* Storyboardable.swift */; };
 		2CA2BB4F2794761D00F8D107 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB4E2794761D00F8D107 /* AppCoordinator.swift */; };
+		2CA2BB53279480C000F8D107 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB52279480C000F8D107 /* HttpRouter.swift */; };
+		2CA2BB552794813100F8D107 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB542794813100F8D107 /* HttpService.swift */; };
+		2CA2BB572794817B00F8D107 /* AirportHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB562794817B00F8D107 /* AirportHttpService.swift */; };
+		2CA2BB59279481BF00F8D107 /* AirportHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB58279481BF00F8D107 /* AirportHttpRouter.swift */; };
+		2CA2BB5B279483D400F8D107 /* AirportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB5A279483D400F8D107 /* AirportService.swift */; };
+		2CA2BB5D279483F700F8D107 /* AirportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB5C279483F700F8D107 /* AirportAPI.swift */; };
+		2CA2BB61279484B700F8D107 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB60279484B700F8D107 /* AirportModel.swift */; };
+		2CA2BB6327948AE700F8D107 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB6227948AE700F8D107 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,14 @@
 		2CA2BB492794728500F8D107 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		2CA2BB4C279472F000F8D107 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		2CA2BB4E2794761D00F8D107 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2CA2BB52279480C000F8D107 /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		2CA2BB542794813100F8D107 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		2CA2BB562794817B00F8D107 /* AirportHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportHttpService.swift; sourceTree = "<group>"; };
+		2CA2BB58279481BF00F8D107 /* AirportHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportHttpRouter.swift; sourceTree = "<group>"; };
+		2CA2BB5A279483D400F8D107 /* AirportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportService.swift; sourceTree = "<group>"; };
+		2CA2BB5C279483F700F8D107 /* AirportAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAPI.swift; sourceTree = "<group>"; };
+		2CA2BB60279484B700F8D107 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
+		2CA2BB6227948AE700F8D107 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		5A88F7E8F96DC19E78A7FDAC /* Pods-CityAirportSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.release.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.release.xcconfig"; sourceTree = "<group>"; };
 		6541C7C7345ED09D3EAB7AA4 /* Pods_CityAirportSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityAirportSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71795402999FDCCFB8F7BC0 /* Pods-CityAirportSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.debug.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +96,8 @@
 				2CA2BB4B279472DC00F8D107 /* Shared */,
 				2CA2BB432794713600F8D107 /* Coordinator */,
 				2CA2BB3127946BAB00F8D107 /* Main.storyboard */,
+				2CA2BB5E2794848B00F8D107 /* Models */,
+				2CA2BB502794808D00F8D107 /* Service */,
 				2CA2BB4027946E3000F8D107 /* ViewModel */,
 				2CA2BB3F27946E2700F8D107 /* View */,
 				2CA2BB3427946BAB00F8D107 /* Assets.xcassets */,
@@ -122,6 +140,36 @@
 				2CA2BB4C279472F000F8D107 /* Storyboardable.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		2CA2BB502794808D00F8D107 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2BB512794809C00F8D107 /* Http */,
+				2CA2BB5A279483D400F8D107 /* AirportService.swift */,
+				2CA2BB5C279483F700F8D107 /* AirportAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2CA2BB512794809C00F8D107 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2BB52279480C000F8D107 /* HttpRouter.swift */,
+				2CA2BB542794813100F8D107 /* HttpService.swift */,
+				2CA2BB562794817B00F8D107 /* AirportHttpService.swift */,
+				2CA2BB58279481BF00F8D107 /* AirportHttpRouter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		2CA2BB5E2794848B00F8D107 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2BB60279484B700F8D107 /* AirportModel.swift */,
+				2CA2BB6227948AE700F8D107 /* CustomError.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5917C35714344F25A96D6B23 /* Frameworks */ = {
@@ -257,14 +305,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA2BB3027946BAB00F8D107 /* SearchCityViewController.swift in Sources */,
+				2CA2BB59279481BF00F8D107 /* AirportHttpRouter.swift in Sources */,
+				2CA2BB6327948AE700F8D107 /* CustomError.swift in Sources */,
+				2CA2BB552794813100F8D107 /* HttpService.swift in Sources */,
 				2CA2BB2C27946BAB00F8D107 /* AppDelegate.swift in Sources */,
+				2CA2BB53279480C000F8D107 /* HttpRouter.swift in Sources */,
 				2CA2BB472794717D00F8D107 /* Coordinator.swift in Sources */,
+				2CA2BB572794817B00F8D107 /* AirportHttpService.swift in Sources */,
 				2CA2BB452794715400F8D107 /* SearchCityCoordinator.swift in Sources */,
 				2CA2BB4A2794728500F8D107 /* BaseCoordinator.swift in Sources */,
 				2CA2BB2E27946BAB00F8D107 /* SceneDelegate.swift in Sources */,
+				2CA2BB5D279483F700F8D107 /* AirportAPI.swift in Sources */,
 				2CA2BB4F2794761D00F8D107 /* AppCoordinator.swift in Sources */,
 				2CA2BB4227946E9000F8D107 /* SearchCityViewModel.swift in Sources */,
 				2CA2BB4D279472F000F8D107 /* Storyboardable.swift in Sources */,
+				2CA2BB5B279483D400F8D107 /* AirportService.swift in Sources */,
+				2CA2BB61279484B700F8D107 /* AirportModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
