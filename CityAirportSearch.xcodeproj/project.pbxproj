@@ -28,6 +28,9 @@
 		2CA2BB5D279483F700F8D107 /* AirportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB5C279483F700F8D107 /* AirportAPI.swift */; };
 		2CA2BB61279484B700F8D107 /* AirportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB60279484B700F8D107 /* AirportModel.swift */; };
 		2CA2BB6327948AE700F8D107 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB6227948AE700F8D107 /* CustomError.swift */; };
+		2CCEFBEB279530AD005DCD70 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEFBEA279530AD005DCD70 /* CityViewModel.swift */; };
+		2CCEFBEE27953AD6005DCD70 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCEFBEC27953AD6005DCD70 /* CityTableViewCell.swift */; };
+		2CCEFBEF27953AD6005DCD70 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCEFBED27953AD6005DCD70 /* CityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		2CA2BB5C279483F700F8D107 /* AirportAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportAPI.swift; sourceTree = "<group>"; };
 		2CA2BB60279484B700F8D107 /* AirportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportModel.swift; sourceTree = "<group>"; };
 		2CA2BB6227948AE700F8D107 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		2CCEFBEA279530AD005DCD70 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		2CCEFBEC27953AD6005DCD70 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		2CCEFBED27953AD6005DCD70 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 		5A88F7E8F96DC19E78A7FDAC /* Pods-CityAirportSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.release.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.release.xcconfig"; sourceTree = "<group>"; };
 		6541C7C7345ED09D3EAB7AA4 /* Pods_CityAirportSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityAirportSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71795402999FDCCFB8F7BC0 /* Pods-CityAirportSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityAirportSearch.debug.xcconfig"; path = "Target Support Files/Pods-CityAirportSearch/Pods-CityAirportSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				2CA2BB2F27946BAB00F8D107 /* SearchCityViewController.swift */,
+				2CCEFBEC27953AD6005DCD70 /* CityTableViewCell.swift */,
+				2CCEFBED27953AD6005DCD70 /* CityTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				2CA2BB4127946E9000F8D107 /* SearchCityViewModel.swift */,
+				2CCEFBEA279530AD005DCD70 /* CityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -251,6 +260,7 @@
 			files = (
 				2CA2BB3827946BAB00F8D107 /* LaunchScreen.storyboard in Resources */,
 				2CA2BB3527946BAB00F8D107 /* Assets.xcassets in Resources */,
+				2CCEFBEF27953AD6005DCD70 /* CityTableViewCell.xib in Resources */,
 				2CA2BB3327946BAB00F8D107 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,12 +321,14 @@
 				2CA2BB2C27946BAB00F8D107 /* AppDelegate.swift in Sources */,
 				2CA2BB53279480C000F8D107 /* HttpRouter.swift in Sources */,
 				2CA2BB472794717D00F8D107 /* Coordinator.swift in Sources */,
+				2CCEFBEB279530AD005DCD70 /* CityViewModel.swift in Sources */,
 				2CA2BB572794817B00F8D107 /* AirportHttpService.swift in Sources */,
 				2CA2BB452794715400F8D107 /* SearchCityCoordinator.swift in Sources */,
 				2CA2BB4A2794728500F8D107 /* BaseCoordinator.swift in Sources */,
 				2CA2BB2E27946BAB00F8D107 /* SceneDelegate.swift in Sources */,
 				2CA2BB5D279483F700F8D107 /* AirportAPI.swift in Sources */,
 				2CA2BB4F2794761D00F8D107 /* AppCoordinator.swift in Sources */,
+				2CCEFBEE27953AD6005DCD70 /* CityTableViewCell.swift in Sources */,
 				2CA2BB4227946E9000F8D107 /* SearchCityViewModel.swift in Sources */,
 				2CA2BB4D279472F000F8D107 /* Storyboardable.swift in Sources */,
 				2CA2BB5B279483D400F8D107 /* AirportService.swift in Sources */,

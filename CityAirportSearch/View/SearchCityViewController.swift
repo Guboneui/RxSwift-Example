@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import RxDataSources
 
 class SearchCityViewController: UIViewController, Storyboardable {
@@ -17,15 +18,39 @@ class SearchCityViewController: UIViewController, Storyboardable {
     
     private var viewModel: SearchCityViewPresentable!
     var viewModelBuilder: SearchCityViewPresentable.ViewModelBuilder!
+    private let disposeBag = DisposeBag()
+    
+    private lazy var datasource = RxTableViewSectionedReloadDataSource<CityItemsSection>(configureCell: { _, tableView, indexPath, item in
+        
+        let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+        cityCell.configure(usingViewModel: item)
+        return cityCell
+    })
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = viewModelBuilder((
             searchText: searchTextField.rx.text.orEmpty.asDriver(), ()
         ))
-        self.title = "Airports"
+        setupUI()
+        setupBinding()
     }
 
 
 }
 
+
+private extension SearchCityViewController {
+    func setupUI() -> Void {
+        self.tableView.register(UINib(nibName: "CityTableViewCell", bundle: nil), forCellReuseIdentifier: "CityTableViewCell")
+        self.title = "Airports"
+    }
+    
+    func setupBinding() -> Void {
+        //self.viewModel.output.cities
+        
+        self.viewModel.output.cities
+            .drive(tableView.rx.items(dataSource: self.datasource))
+            .disposed(by: disposeBag)
+    }
+}
