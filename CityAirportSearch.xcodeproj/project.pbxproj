@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1C2D54CE069511A2AA070D68 /* Pods_CityAirportSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541C7C7345ED09D3EAB7AA4 /* Pods_CityAirportSearch.framework */; };
+		2C011F34279713A800B38785 /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C011F32279713A800B38785 /* AirportTableViewCell.swift */; };
+		2C011F35279713A800B38785 /* AirportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C011F33279713A800B38785 /* AirportTableViewCell.xib */; };
+		2C011F372797166500B38785 /* AirportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C011F362797166500B38785 /* AirportViewModel.swift */; };
 		2CA2BB2C27946BAB00F8D107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB2B27946BAB00F8D107 /* AppDelegate.swift */; };
 		2CA2BB2E27946BAB00F8D107 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB2D27946BAB00F8D107 /* SceneDelegate.swift */; };
 		2CA2BB3027946BAB00F8D107 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2BB2F27946BAB00F8D107 /* SearchCityViewController.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C011F32279713A800B38785 /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
+		2C011F33279713A800B38785 /* AirportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirportTableViewCell.xib; sourceTree = "<group>"; };
+		2C011F362797166500B38785 /* AirportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportViewModel.swift; sourceTree = "<group>"; };
 		2CA2BB2827946BAB00F8D107 /* CityAirportSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityAirportSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA2BB2B27946BAB00F8D107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CA2BB2D27946BAB00F8D107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				2CCEFBEC27953AD6005DCD70 /* CityTableViewCell.swift */,
 				2CCEFBED27953AD6005DCD70 /* CityTableViewCell.xib */,
 				2CA3893A27968281004458C3 /* AirportsViewController.swift */,
+				2C011F32279713A800B38785 /* AirportTableViewCell.swift */,
+				2C011F33279713A800B38785 /* AirportTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 				2CA2BB4127946E9000F8D107 /* SearchCityViewModel.swift */,
 				2CCEFBEA279530AD005DCD70 /* CityViewModel.swift */,
 				2CA3893C279682F2004458C3 /* AirportsViewModel.swift */,
+				2C011F362797166500B38785 /* AirportViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA2BB3827946BAB00F8D107 /* LaunchScreen.storyboard in Resources */,
+				2C011F35279713A800B38785 /* AirportTableViewCell.xib in Resources */,
 				2CA2BB3527946BAB00F8D107 /* Assets.xcassets in Resources */,
 				2CCEFBEF27953AD6005DCD70 /* CityTableViewCell.xib in Resources */,
 				2CA2BB3327946BAB00F8D107 /* Main.storyboard in Resources */,
@@ -336,6 +346,8 @@
 				2CA2BB452794715400F8D107 /* SearchCityCoordinator.swift in Sources */,
 				2CA2BB4A2794728500F8D107 /* BaseCoordinator.swift in Sources */,
 				2CA2BB2E27946BAB00F8D107 /* SceneDelegate.swift in Sources */,
+				2C011F34279713A800B38785 /* AirportTableViewCell.swift in Sources */,
+				2C011F372797166500B38785 /* AirportViewModel.swift in Sources */,
 				2CA2BB5D279483F700F8D107 /* AirportAPI.swift in Sources */,
 				2CA2BB4F2794761D00F8D107 /* AppCoordinator.swift in Sources */,
 				2CA3893B27968281004458C3 /* AirportsViewController.swift in Sources */,
