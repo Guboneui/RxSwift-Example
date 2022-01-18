@@ -63,6 +63,36 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </scene>
+        <!--Airports View Controller-->
+        <scene sceneID="yrH-nm-xqB">
+            <objects>
+                <viewController storyboardIdentifier="AirportsViewController" id="bKq-35-ZXc" customClass="AirportsViewController" customModule="CityAirportSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fSw-7g-awP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="exP-6o-kzC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zHp-C5-s8v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="exP-6o-kzC" firstAttribute="leading" secondItem="zHp-C5-s8v" secondAttribute="leading" id="GM2-jm-nHL"/>
+                            <constraint firstItem="zHp-C5-s8v" firstAttribute="trailing" secondItem="exP-6o-kzC" secondAttribute="trailing" id="Slz-kj-Isa"/>
+                            <constraint firstAttribute="bottom" secondItem="exP-6o-kzC" secondAttribute="bottom" id="eHN-57-dBN"/>
+                            <constraint firstItem="exP-6o-kzC" firstAttribute="top" secondItem="zHp-C5-s8v" secondAttribute="top" id="s4k-q1-kCw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="exP-6o-kzC" id="Q1N-Id-dS2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdE-hS-sCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="115"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

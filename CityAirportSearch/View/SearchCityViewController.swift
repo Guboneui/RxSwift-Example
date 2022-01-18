@@ -30,7 +30,8 @@ class SearchCityViewController: UIViewController, Storyboardable {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = viewModelBuilder((
-            searchText: searchTextField.rx.text.orEmpty.asDriver(), ()
+            searchText: searchTextField.rx.text.orEmpty.asDriver(),
+            citySelect: tableView.rx.modelSelected(CityViewModel.self).asDriver()
         ))
         setupUI()
         setupBinding()

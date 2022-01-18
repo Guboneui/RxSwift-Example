@@ -14,7 +14,8 @@ import RxDataSources
 protocol SearchCityViewPresentable {
     
     typealias Input = (
-        searchText: Driver<String>, ()
+        searchText: Driver<String>,
+        citySelect: Driver<CityViewModel>
     )
     typealias Output = (
         cities: Driver<[CityItemsSection]>, ()
@@ -34,6 +35,12 @@ class SearchCityViewModel: SearchCityViewPresentable {
     
     typealias State = (airports: BehaviorRelay<Set<AirportModel>>, ())
     private let state: State = (airports: BehaviorRelay<Set<AirportModel>>(value: []), ())
+    
+    private typealias RoutingAction = (citySelectedRelay: PublishRelay<Set<AirportModel>>, ())
+    private let routingAction: RoutingAction = (citySelectedRelay: PublishRelay(), ())
+    
+    typealias Routing = (citySelected: Driver<Set<AirportModel>>, ())
+    lazy var router: Routing = (citySelected: routingAction.citySelectedRelay.asDriver(onErrorDriveWith: .empty()), ())
     
     init(input: SearchCityViewPresentable.Input, airportService: AirportAPI) {
         self.input = input
@@ -89,6 +96,19 @@ private extension SearchCityViewModel {
                 state.airports.accept($0)
             })
             .subscribe()
+            .disposed(by: disposeBag)
+        
+        self.input.citySelect
+            .map { $0.city }
+            .withLatestFrom(state.airports.asDriver()) { ($0, $1) }
+            .map {(city, airports) in
+                airports.filter({$0.city == city})
+            }
+            .map ({ [routingAction] in
+                routingAction.citySelectedRelay.accept($0)
+                //print("Airports selected: \($0)")
+            })
+            .drive()
             .disposed(by: disposeBag)
     }
 }
