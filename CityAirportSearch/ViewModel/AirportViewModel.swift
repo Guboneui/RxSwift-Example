@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol AirportViewPresentable {
     var name: String { get }
@@ -33,13 +34,25 @@ struct AirportViewModel: AirportViewPresentable {
 
 extension AirportViewModel {
     
-    init(usingModel model: AirportModel) {
+    init(usingModel model: AirportModel, currentLocation: (lat: Double, lon: Double)) {
         self.name = model.name
         self.code = model.code
         self.address = "\(model.state ?? ""), \(model.country)"
         self.runwayLength = "Runway Length: \(model.runway_length ?? "NA")"
         self.location = (lat: model.lat, lon: model.lon)
         /// Fix Me - Distancing calculation from current location to airport
-        self.distance = 0
+        self.distance = AirportViewModel.getDistance(airportLocation: (lat: Double(model.lat), lon: Double(model.lon)), currentLocation: currentLocation)
+    }
+}
+
+extension AirportViewModel {
+    static func getDistance(airportLocation: (lat: Double?, lon: Double?),
+                     currentLocation: (lat: Double, lon: Double)) -> Double? {
+        
+        guard let airportLat = airportLocation.lat,
+              let airportLon = airportLocation.lon else { return nil }
+        let current = CLLocation(latitude: currentLocation.lat, longitude: currentLocation.lon)
+        let airport = CLLocation(latitude: airportLat, longitude: airportLon)
+        return current.distance(from: airport)
     }
 }
