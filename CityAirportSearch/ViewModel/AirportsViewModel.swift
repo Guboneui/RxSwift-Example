@@ -53,7 +53,7 @@ private extension AirportsViewModel {
                 arg.models.compactMap { AirportViewModel(
                     usingModel: $0,
                     currentLocation: arg.location ?? (lat: 0, lon: 0))
-                }
+                }.sorted()
             })
             
             .map {[AirportItemSection(model: 0, items: $0)]}
